@@ -1,14 +1,10 @@
 /* eslint no-undef: "error" */
 
-import React from 'react';
-import { render } from 'react-dom';
-import Register from '../component/form';
-import '../css/index.scss';
+import React from "react";
+import { render } from "react-dom";
+import Register from "../component/form";
+import "../css/index.scss";
 
-const root = document.getElementById('root');
+const root = document.getElementById("root");
 
-render(
-  <Register />,
-  root,
-);
-
+render(<Register />, root);

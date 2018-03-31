@@ -4,9 +4,13 @@
   "description": "Build a responsive registration form component using ReactJs",
   "main": "index.js",
   "scripts": {
-    "start": "webpack -w --mode development",
+    "start": "npm run lint && webpack -w --mode development",
     "prod": "webpack --mode production",
-    "lint": "eslint --fix src/js/**/*.js"
+    "lint": "eslint --fix src/js/**/*.js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": ["eslint --fix src", "git add"]
   },
   "repository": {
     "type": "git",
@@ -20,6 +24,8 @@
   },
   "homepage": "https://github.com/kasiriveni/react-register-form#readme",
   "dependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0"
   },
